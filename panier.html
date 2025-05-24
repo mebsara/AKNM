@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Panier - Or & Douceur : Offres Exclusives & Avis Clients</title>
+    <link rel="stylesheet" href="esse.css"> 
+    <link rel="stylesheet" href="promotions.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <style>
+   /* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background: #333;
+        transition: all 0.3s;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .connexion-container {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    input, button {
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+    </style>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-or">Or</span>
+            <span class="logo-amp">&</span>
+            <span class="logo-douceur">Douceur</span>
+        </a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="nos produits.html">Nos produits</a></li>
+                <li><a href="insciptio.html">S'inscrire</a></li>
+                <li><a href="contactt.html">Nous contacter</a></li>
+                <li><a href="promotion.html">Promotions</a></li> 
+                <li><a href="panier.html" class="panier active">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count">0</span>
+                </a></li>
+                
+            </ul>
+        </nav>
+
+        <button class="hamburger" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header> 
+
+    <main class="panier-main">
+        <h2 class="titre-section">Votre Panier</h2>
+        <div id="panier-items">
+            <p id="empty-cart-message">Votre panier est vide pour le moment.</p>
+            </div>
+        <div class="panier-recap">
+            <div class="panier-total">
+                <span>Total du panier :</span>
+                <span id="total-price">0.00€</span>
+            </div>
+
+            <div class="paiement-section">
+                <h3>Choisissez votre méthode de paiement :</h3>
+                <div class="paiement-methods-grid">
+                    <label class="payment-option-card">
+                        <input type="radio" name="payment_method" value="paypal" checked>
+                        <i class="fab fa-paypal"></i>
+                        <span>PayPal</span>
+                    </label>
+                    <label class="payment-option-card">
+                        <input type="radio" name="payment_method" value="carte_bancaire">
+                        <i class="far fa-credit-card"></i>
+                        <span>Carte Bancaire</span>
+                    </label>
+                    <label class="payment-option-card">
+                        <input type="radio" name="payment_method" value="paiement_livraison">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>Paiement à la livraison</span>
+                    </label>
+                    </div>
+            </div>
+
+            <button class="btn-commander">Procéder au paiement</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Or & Douceur</h3>
+                <p>Produits de terroir d'exception : huiles, miels, tapenades et figues sèches.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="nos-produits.html">Nos Produits</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email : <a href="mailto:contact@oretdouceur.com">contact@oretdouceur.com</a></p>
+                <p>Téléphone : <a href="tel:+212600000000">+212 6 00 00 00 00</a></p>
+                <p>Adresse : Paris, France</p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="https://www.instagram.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="https://twitter.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Or & Douceur. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="panier.js"></script>
+    <script>
+        // Ce script est pour s'assurer que le compteur du panier dans l'en-tête fonctionne sur TOUTES les pages
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateCartCount() {
+                const panier = JSON.parse(localStorage.getItem('panier')) || [];
+                const count = panier.reduce((total, item) => total + item.quantite, 0);
+                const compteur = document.getElementById('cart-count'); 
+                
+                if (compteur) {
+                    compteur.textContent = count;
+                }
+            }
+            updateCartCount(); // Appelle la fonction au chargement de la page
+        });
+
+        // Burger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbar.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    }
+});
+
+// Close menu on item click
+document.querySelectorAll('.navbar a').forEach(item => {
+    item.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    });
+});
+    </script>
+</body>
+</html>

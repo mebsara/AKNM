@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Connexion - Or & Douceur</title>
+    <link rel="stylesheet" href="esse.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <style>
+    
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background: #333;
+        transition: all 0.3s;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .connexion-container {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    input, button {
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+.connexion-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+}
+    </style>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-or">Or</span>
+            <span class="logo-amp">&</span>
+            <span class="logo-douceur">Douceur</span>
+        </a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="nos produits.html">Nos produits</a></li>
+                <li><a href="insciptio.html">S'inscrire</a></li>
+                <li><a href="contactt.html">Nous contacter</a></li>
+                <li><a href="promotion.html">Promotions</a></li>
+                <li><a href="panier.html" class="panier">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count">0</span>
+                </a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <section class="connexion-section">
+            <div class="connexion-container">
+                <h2 class="connexion-title">Connectez-vous à votre compte</h2>
+                <p class="connexion-subtitle">Accédez à vos commandes et à votre espace client.</p>
+
+                <form id="connexionForm" class="connexion-form">
+                    <div class="form-group">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
+                        <div class="error-message" id="passwordError"></div>
+                    </div>
+
+                    <button type="submit" class="cta-button connexion-button">Se connecter</button>
+                    
+                    <div class="form-footer">
+                        <a href="#" class="mot-de-passe-oublie">Mot de passe oublié ?</a>
+                        <p>Pas encore de compte ? <a href="insciptio.html" class="lien-inscription">Créez-en un</a></p>
+                    </div>
+
+                    <div id="connexionMessage" class="connexion-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Or & Douceur</h3>
+                <p>Produits de terroir d'exception : huiles, miels, tapenades et figues sèches.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="nos produits.html">Nos Produits</a></li>
+                    <li><a href="insciptio.html">S'inscrire</a></li>
+                    <li><a href="contactt.html">Nous contacter</a></li>
+                    <li><a href="promotion.html">Promotions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email : <a href="mailto:contact@oretdouceur.com">contact@oretdouceur.com</a></p>
+                <p>Téléphone : <a href="tel:+212600000000">+212 6 00 00 00 00</a></p>
+                <p>Adresse : Paris, France</p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="https://www.instagram.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="https://twitter.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Or & Douceur. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="connexion.js"></script>
+    <script>
+        // Burger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbar.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    }
+});
+
+// Close menu on item click
+document.querySelectorAll('.navbar a').forEach(item => {
+    item.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    });
+});
+        // Ce script est pour le panier, vous l'aviez déjà sur l'accueil, il faut le garder ici aussi
+        // ou mieux, le mettre dans un fichier JS commun si vous avez beaucoup de pages.
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+
+            const header = document.querySelector('header');
+            if (header) { 
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+        });
+
+        function updateCartCount() {
+            const panier = JSON.parse(localStorage.getItem('panier')) || [];
+            const count = panier.reduce((total, item) => total + item.quantite, 0);
+            const compteur = document.getElementById('cart-count');
+            
+            if (compteur) { 
+                compteur.textContent = count;
+            }
+        }
+    </script>
+</body>
+</html>

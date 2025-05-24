@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions - Or & Douceur : Offres Exclusives & Avis Clients</title>
+    <link rel="stylesheet" href="esse.css"> 
+    <link rel="stylesheet" href="promotions.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <style>
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background: #333;
+        transition: all 0.3s;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .connexion-container {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    input, button {
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+    </style>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-or">Or</span>
+            <span class="logo-amp">&</span>
+            <span class="logo-douceur">Douceur</span>
+        </a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="nos produits.html">Nos produits</a></li>
+                <li><a href="insciptio.html">S'inscrire</a></li>
+                <li><a href="contactt.html">Nous contacter</a></li>
+                <li><a href="promotion.html" class="active">Promotions</a></li> 
+                <li><a href="panier.html" class="panier">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count">0</span>
+                </a></li>
+                
+            </ul>
+        </nav>
+
+        <button class="hamburger" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+
+    <main class="contact-main">
+        <h2 class="titre-section">Contactez-nous</h2>
+        <p class="contact-intro">
+            Une question sur nos produits ? Une suggestion ? N'hésitez pas à nous envoyer un message !
+            Nous sommes là pour vous répondre.
+        </p>
+
+        <div class="contact-info-grid">
+            <div class="contact-info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>contact@oretdouceur.com</p>
+                <a href="mailto:contact@oretdouceur.com">Envoyer un email</a>
+            </div>
+            <div class="contact-info-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Téléphone</h3>
+                <p>+212 6 00 00 00 00</p>
+                <a href="tel:+212600000000">Appelez-nous</a>
+            </div>
+            <div class="contact-info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Adresse</h3>
+                <p>123 Rue de l'Olivier</p>
+                <p>75001 Paris, France</p>
+                <a href="https://maps.google.com/?q=Paris,France" target="_blank">Voir sur la carte</a>
+            </div>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="name">Votre Nom Complet</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Votre Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" name="subject" required>
+                <div class="error-message" id="subjectError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Votre Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                <div class="error-message" id="messageError"></div>
+            </div>
+
+            <button type="submit" class="btn-submit">Envoyer le message</button>
+            <div id="confirmationMessage" class="confirmation-message"></div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Or & Douceur</h3>
+                <p>Produits de terroir d'exception : huiles, miels, tapenades et figues sèches.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="nos produits.html">Nos Produits</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contactt.html">Contact</a></li>
+                    <li><a href="Promotion.html" class="Nos promotions"></a>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email : <a href="mailto:contact@oretdouceur.com">contact@oretdouceur.com</a></p>
+                <p>Téléphone : <a href="tel:+212600000000">+212 6 00 00 00 00</a></p>
+                <p>Adresse : Paris, France</p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="https://www.instagram.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="https://twitter.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Or & Douceur. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Ce script est pour s'assurer que le compteur du panier dans l'en-tête fonctionne sur TOUTES les pages
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateCartCount() {
+                const panier = JSON.parse(localStorage.getItem('panier')) || [];
+                const count = panier.reduce((total, item) => total + item.quantite, 0);
+                const compteur = document.getElementById('cart-count'); 
+                
+                if (compteur) {
+                    compteur.textContent = count;
+                }
+            }
+            updateCartCount(); 
+        });
+
+        // Burger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbar.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    }
+});
+
+// Close menu on item click
+document.querySelectorAll('.navbar a').forEach(item => {
+    item.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    });
+});
+    </script>
+    <script src="contact.js"></script>
+</body>
+</html>

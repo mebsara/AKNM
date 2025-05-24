@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions - Or & Douceur : Offres Exclusives & Avis Clients</title>
+    <link rel="stylesheet" href="esse.css"> 
+    <link rel="stylesheet" href="promotions.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<style>
+            /* Responsive Design */
+            @media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background: #333;
+        transition: all 0.3s;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .connexion-container {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    input, button {
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+</style>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-or">Or</span>
+            <span class="logo-amp">&</span>
+            <span class="logo-douceur">Douceur</span>
+        </a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="nos produits.html">Nos produits</a></li>
+                <li><a href="insciptio.html">S'inscrire</a></li>
+                <li><a href="contactt.html">Nous contacter</a></li>
+                <li><a href="promotion.html" class="active">Promotions</a></li> 
+                <li><a href="panier.html" class="panier">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span id="cart-count">0</span>
+                </a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <main class="promotions-main-content">
+        <section class="hero-section light-elegant-hero">
+            <div class="hero-text-content">
+                <p class="hero-tagline">L'Excellence à Portée de Main</p>
+                <h1>Vos Douceurs Préférées, <br>À Prix Sublimes.</h1>
+                <p class="hero-description">Découvrez des saveurs authentiques et profitez de nos offres exclusives. Chaque produit "Or & Douceur" est une promesse de qualité.</p>
+                <a href="#all-promotions" class="btn-hero-action">Explorer les Offres</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="imagess/k.jpg" alt="Produits Or & Douceur en promotion">
+            </div>
+        </section>
+
+        <section id="all-promotions" class="all-promotions-section">
+            <h2 class="section-title">Nos Trésors en Promotion</h2>
+            <div class="promotion-grid">
+                <div class="promo-item-card" data-id="huile-olive" data-name="Huile d'Olive Extra 500ml" data-price="12.00" data-image="imagess/olive oil.jpg">
+                    <div class="promo-item-image-wrapper">
+                        <img src="imagess/olive oil.jpg" alt="Huile d'olive promotion">
+                        <span class="promo-item-badge">-20%</span>
+                    </div>
+                    <div class="promo-item-content">
+                        <h3>Huile d'Olive Extra 500ml</h3>
+                        <p class="promo-item-description">Notre huile d'olive vierge extra de première pression, douce et fruitée.</p>
+                        <div class="promo-item-prices">
+                            <span class="promo-item-original-price">15,00 €</span>
+                            <span class="promo-item-new-price">12,00 €</span>
+                        </div>
+                        <button class="btn-add-to-cart" onclick="addToCart(this)">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="promo-item-card" data-id="miel-oranger" data-name="Miel d'Oranger 250g" data-price="7.50" data-image="imagess/miel3.jpg">
+                    <div class="promo-item-image-wrapper">
+                        <img src="imagess/miel3.jpg" alt="Miel en promotion">
+                        <span class="promo-item-badge">-25%</span>
+                    </div>
+                    <div class="promo-item-content">
+                        <h3>Miel d'Oranger 250g</h3>
+                        <p class="promo-item-description">Un miel délicat aux notes florales d'agrumes, parfait pour vos desserts.</p>
+                        <div class="promo-item-prices">
+                            <span class="promo-item-original-price">10,00 €</span>
+                            <span class="promo-item-new-price">7,50 €</span>
+                        </div>
+                        <button class="btn-add-to-cart" onclick="addToCart(this)">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="promo-item-card" data-id="Camembert" data-name="Camembert 200g" data-price="6.00" data-image="imagess/gruere.jpg">
+                    <div class="promo-item-image-wrapper">
+                        <img src="imagess/gruere.jpg" alt="Camembert en promotion">
+                        <span class="promo-item-badge">-25%</span>
+                    </div>
+                    <div class="promo-item-content">
+                        <h3>Camembert 200g</h3>
+                        <p class="promo-item-description">Camembert pas comme les autres.</p>
+                        <div class="promo-item-prices">
+                            <span class="promo-item-original-price">8,00 €</span>
+                            <span class="promo-item-new-price">6,00 €</span>
+                        </div>
+                        <button class="btn-add-to-cart" onclick="addToCart(this)">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="promo-item-card" data-id="dattes-medjoul" data-name="Dattes Medjoul 1kg" data-price="29.99" data-image="imagess/datte1.jpg">
+                    <div class="promo-item-image-wrapper">
+                        <img src="imagess/datte1.jpg" alt="Dattes Medjoul">
+                        <span class="promo-item-badge">-15%</span>
+                    </div>
+                    <div class="promo-item-content">
+                        <h3>Dattes Medjoul 1kg</h3>
+                        <p class="promo-item-description">Des dattes Medjoul juteuses et sucrées, une douceur naturelle d'exception.</p>
+                        <div class="promo-item-prices">
+                            <span class="promo-item-original-price">35,00 €</span>
+                            <span class="promo-item-new-price">29,99 €</span>
+                        </div>
+                        <button class="btn-add-to-cart" onclick="addToCart(this)">
+                            <i class="fas fa-cart-plus"></i> Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo-code-section">
+            <h2 class="section-title">✨ Un Cadeau Juste pour Vous !</h2>
+            <p class="section-subtitle">Utilisez ce code lors de votre commande pour une réduction exclusive sur votre prochain délice.</p>
+            <div class="promo-code-box">
+                <span class="code-text" id="promoCodeDisplay">DOUCEURPLUS25</span>
+                <button class="copy-btn" id="copyPromoCode">Copier le code</button>
+            </div>
+            <p class="promo-terms">Valable sur tout le site, une seule utilisation par client. Non cumulable avec d'autres offres. Valide jusqu'au 31/12/2025.</p>
+        </section>
+
+        <section class="review-section">
+            <h2 class="section-title">🧡 Votre Avis, Notre Inspiration 🧡</h2>
+            <p class="section-subtitle">Partagez votre expérience et aidez-nous à perfectionner chaque douceur.</p>
+            <form id="reviewForm" class="review-form">
+                <div class="form-group">
+                    <label for="reviewName">Votre Nom :</label>
+                    <input type="text" id="reviewName" name="reviewName" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewProduct">Produit concerné (optionnel) :</label>
+                    <select id="reviewProduct" name="reviewProduct">
+                        <option value="">Sélectionnez un produit...</option>
+                        <option value="huile-olive">Huile d'Olive Extra</option>
+                        <option value="miel-oranger">Miel d'Oranger</option>
+                        <option value="tapenade-verte">Tapenade Verte</option>
+                        <option value="dattes-medjoul">Dattes Medjoul</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reviewRating">Votre Note :</label>
+                    <div class="rating-stars" id="reviewRating">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" id="selectedRating" name="selectedRating" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="reviewText">Votre Avis :</label>
+                    <textarea id="reviewText" name="reviewText" rows="6" placeholder="Décrivez votre expérience avec nos produits..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit-review">Envoyer votre avis</button>
+            </form>
+
+            <div class="reviews-list" id="reviewsList">
+                <h3>Ce que nos clients en disent :</h3>
+                <p class="no-reviews-message">Aucun avis pour le moment. Soyez le premier !</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Or & Douceur</h3>
+                <p>Produits de terroir d'exception : huiles, miels, tapenades et figues sèches.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="nos produits.html">Nos Produits</a></li>
+                    <li><a href="insciptio.html">S'inscrire</a></li>
+                    <li><a href="contactt.html">Nous contacter</a></li>
+                    <li><a href="promotions.html">Promotions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email : <a href="mailto:contact@oretdouceur.com">contact@oretdouceur.com</a></p>
+                <p>Téléphone : <a href="tel:+212600000000">+212 6 00 00 00 00</a></p>
+                <p>Adresse : Paris, France</p>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="https://www.instagram.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="https://twitter.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Or & Douceur. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+// Script JavaScript pour la page promotions.html
+
+// Fonction globale pour ajouter au panier (compatible avec toutes les pages)
+window.addToPanier = function(produit) {
+    let panier = JSON.parse(localStorage.getItem('panier')) || [];
+    const produitExistant = panier.find(item => item.id === produit.id);
+    
+    if (produitExistant) {
+        produitExistant.quantite += 1;
+    } else {
+        panier.push({
+            id: produit.id,
+            nom: produit.nom,
+            prix: produit.prix,
+            image: produit.image,
+            quantite: 1
+        });
+    }
+    localStorage.setItem('panier', JSON.stringify(panier));
+    updateCartCount();
+    showNotification(`${produit.nom} a été ajouté au panier`);
+};
+
+// Fonction pour ajouter des promotions au panier
+window.addToCart = function(button) {
+    console.log("addToCart: Bouton cliqué.");
+    const productCard = button.closest('.promo-item-card');
+    
+    const product = {
+        id: productCard.dataset.id,
+        nom: productCard.dataset.name, // Utiliser 'nom' pour la cohérence
+        prix: parseFloat(productCard.dataset.price),
+        image: productCard.dataset.image
+    };
+    
+    console.log("addToCart: Produit à ajouter:", product);
+    
+    // Utiliser la fonction globale addToPanier
+    window.addToPanier(product);
+    
+    // Animation de confirmation
+    const icon = button.querySelector('i');
+    icon.classList.remove('fa-cart-plus');
+    icon.classList.add('fa-check');
+    button.style.backgroundColor = '#27ae60';
+    
+    setTimeout(() => {
+        icon.classList.remove('fa-check');
+        icon.classList.add('fa-cart-plus');
+        button.style.backgroundColor = '';
+    }, 2000);
+};
+
+// Fonction pour mettre à jour le compteur du panier
+function updateCartCount() {
+    const panier = JSON.parse(localStorage.getItem('panier')) || [];
+    const count = panier.reduce((total, item) => total + item.quantite, 0);
+    const compteur = document.getElementById('cart-count');
+    
+    if (compteur) { 
+        compteur.textContent = count;
+    }
+}
+
+// Fonction pour afficher les notifications
+function showNotification(message) {
+    // Supprimer toute notification existante
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    
+    // Styles pour la notification
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #27ae60;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
+}
+
+// Fonction pour copier le code promo
+function initPromoCode() {
+    const copyButton = document.getElementById('copyPromoCode');
+    if (copyButton) {
+        copyButton.addEventListener('click', function() {
+            const codeText = document.getElementById('promoCodeDisplay').textContent;
+            navigator.clipboard.writeText(codeText).then(() => {
+                const originalText = this.textContent;
+                this.textContent = 'Copié !';
+                this.style.backgroundColor = '#27ae60';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.style.backgroundColor = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Erreur lors de la copie:', err);
+                // Fallback pour les navigateurs qui ne supportent pas clipboard API
+                const textArea = document.createElement('textarea');
+                textArea.value = codeText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                const originalText = this.textContent;
+                this.textContent = 'Copié !';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 2000);
+            });
+        });
+    }
+}
+
+// Fonction pour initialiser les étoiles de notation
+function initRatingStars() {
+    const stars = document.querySelectorAll('.rating-stars .fa-star');
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const rating = parseInt(this.dataset.rating);
+            document.getElementById('selectedRating').value = rating;
+            
+            stars.forEach((s, index) => {
+                if (index < rating) {
+                    s.classList.add('fas');
+                    s.classList.remove('far');
+                } else {
+                    s.classList.add('far');
+                    s.classList.remove('fas');
+                }
+            });
+        });
+        
+        // Effet hover
+        star.addEventListener('mouseenter', function() {
+            const rating = parseInt(this.dataset.rating);
+            stars.forEach((s, index) => {
+                if (index < rating) {
+                    s.style.color = '#ffd700';
+                } else {
+                    s.style.color = '';
+                }
+            });
+        });
+    });
+    
+    // Reset hover effect when leaving the rating area
+    const ratingContainer = document.getElementById('reviewRating');
+    if (ratingContainer) {
+        ratingContainer.addEventListener('mouseleave', function() {
+            const selectedRating = parseInt(document.getElementById('selectedRating').value);
+            stars.forEach((s, index) => {
+                if (index < selectedRating) {
+                    s.style.color = '#ffd700';
+                } else {
+                    s.style.color = '';
+                }
+            });
+        });
+    }
+}
+
+// Fonction pour initialiser le formulaire d'avis
+function initReviewForm() {
+    const reviewForm = document.getElementById('reviewForm');
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('reviewName').value;
+            const rating = document.getElementById('selectedRating').value;
+            const reviewText = document.getElementById('reviewText').value;
+            
+            if (rating === '0') {
+                alert('Veuillez sélectionner une note.');
+                return;
+            }
+            
+            showNotification('Merci pour votre avis !');
+            this.reset();
+            
+            // Reset stars
+            const stars = document.querySelectorAll('.rating-stars .fa-star');
+            stars.forEach(star => {
+                star.classList.add('far');
+                star.classList.remove('fas');
+                star.style.color = '';
+            });
+            document.getElementById('selectedRating').value = 0;
+        });
+    }
+}
+
+// Initialisation au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Page promotions chargée');
+    
+    // Mettre à jour le compteur du panier
+    updateCartCount();
+    
+    // Initialiser toutes les fonctionnalités
+    initPromoCode();
+    initRatingStars();
+    initReviewForm();
+    
+    // Vérifier que les boutons d'ajout au panier sont bien configurés
+    const addToCartButtons = document.querySelectorAll('.btn-add-to-cart');
+    console.log(`Nombre de boutons d'ajout au panier trouvés: ${addToCartButtons.length}`);
+    
+    addToCartButtons.forEach((button, index) => {
+        console.log(`Bouton ${index + 1}:`, button.getAttribute('onclick'));
+    });
+    
+    // Gestion du scroll pour le header (si nécessaire)
+    const header = document.querySelector('header');
+    if (header) { 
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+    
+    console.log('Initialisation terminée');
+});
+
+// Debug: Fonction pour vérifier l'état du panier
+window.debugPanier = function() {
+    const panier = JSON.parse(localStorage.getItem('panier')) || [];
+    console.log('Contenu du panier:', panier);
+    console.log('Nombre total d\'articles:', panier.reduce((total, item) => total + item.quantite, 0));
+};
+
+// Burger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbar.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    }
+});
+
+// Close menu on item click
+document.querySelectorAll('.navbar a').forEach(item => {
+    item.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    });
+});
+    </script>
+</body>
+</html>

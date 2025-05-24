@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Or & Douceur : Produits du Terroir Authentiques</title>
+    <link rel="stylesheet" href="esse.css"> 
+    <link rel="stylesheet" href="promotions.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+<body>
+
+    <style>
+   /* Responsive Design */
+   @media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        height: calc(100vh - 70px);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background: #333;
+        transition: all 0.3s;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .connexion-container {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    input, button {
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+    </style>
+
+<header>
+    <a href="index.html" class="logo">
+        <span class="logo-or">Or</span>
+        <span class="logo-amp">&</span>
+        <span class="logo-douceur">Douceur</span>
+    </a>
+
+    <nav>
+        <ul class="navbar">
+            <li><a href="accueill.html" class="active">Accueil</a></li>
+            <li><a href="nos produits.html">Nos produits</a></li>
+            <li><a href="insciptio.html">S'inscrire</a></li>
+            <li><a href="connexion.html">Se connecter</a></li>
+            <li><a href="contactt.html">Nous contacter</a></li>
+            <li><a href="promotion.html">Promotions</a></li>
+            <li><a href="panier.html" class="panier">
+                <i class="fas fa-shopping-basket"></i>
+                <span id="cart-count">0</span>
+            </a></li>
+        </ul>
+    </nav>
+    <button class="hamburger" aria-label="Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+</header>
+
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>L'excellence du terroir,<br> l'élégance en bouteille</h1>
+            <p>Découvrez des huiles d’olive, miels et douceurs artisanales issus d’un savoir-faire authentique et d’une nature généreuse.</p>
+            <a href="nos produits.html" class="cta-button">Voir nos produits</a>
+        </div>
+        <div class="hero-image">
+            <img src="imagess/belle.jpg" alt="Produits Or & Douceur">
+        </div>
+    </section>
+    
+    <section class="nos-produits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span>N</span>os produits</h2>
+                <p class="section-subtitle">Chez Or & Douceur, nous vous offrons une gamme authentique de produits du terroir.</p>
+            </div>
+            
+            <div class="produits-grid">
+                <div class="produit-card">
+                    <div class="produit-image-container">
+                        <img src="imagess/huiles.jpg" alt="Huiles" class="produit-image">
+                        </div>
+                    <h3 class="produit-title">Huiles</h3>
+                </div>
+                
+                <div class="produit-card">
+                    <div class="produit-image-container">
+                        <img src="imagess/honey.jpg" alt="Miel pur" class="produit-image">
+                        </div>
+                    <h3 class="produit-title">Miel</h3>
+                </div>
+                
+                <div class="produit-card">
+                    <div class="produit-image-container">
+                        <img src="imagess/nos fromages.jpg" alt="Tapenade" class="produit-image">
+                        </div>
+                    <h3 class="produit-title">NOS Frommges</h3>
+                </div>
+                
+                <div class="produit-card">
+                    <div class="produit-image-container">
+                        <img src="imagess/fseches.jpg" alt="Figues sèches" class="produit-image">
+                        </div>
+                    <h3 class="produit-title">Figues sèches</h3>
+                </div>
+                
+                <div class="produit-card">
+                    <div class="produit-image-container">
+                        <img src="imagess/epi.jpg" alt="Fruits secs" class="produit-image">
+                        </div>
+                    <h3 class="produit-title">epices</h3>
+                </div>
+                
+                <div class="produit-card">
+                    <div class="produit-image-container">
+                        <img src="./imagess/dattes.jpg" alt="Tisanes bio" class="produit-image">
+                        </div>
+                    <h3 class="produit-title">Nos dattes</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="a-propos">
+        <div class="container">
+            <h2 class="section-title">À propos de <span>Or & Douceur</span></h2>
+            <p class="a-propos-text">
+                Chez <strong>Or & Douceur</strong>, nous sommes passionnés par les saveurs du terroir. Depuis plusieurs années, nous sélectionnons avec soin des produits artisanaux de grande qualité : huiles d’olive extraites à froid, miels purs, tapenades maison, figues sèches et bien plus encore. Notre objectif est simple : vous faire découvrir le meilleur du patrimoine culinaire méditerranéen.
+            </p>
+        </div>
+    </section>
+    
+    <section class="engagements">
+        <div class="container">
+            <h2 class="section-title">Nos engagements</h2>
+            <div class="engagements-grid">
+                <div class="engagement">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Produits naturels</h3>
+                    <p>Sans additifs, sans conservateurs. Juste la nature et le savoir-faire.</p>
+                </div>
+                <div class="engagement">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Artisanat local</h3>
+                    <p>Nous travaillons avec des producteurs locaux pour garantir une qualité irréprochable.</p>
+                </div>
+                <div class="engagement">
+                    <i class="fas fa-award"></i>
+                    <h3>Qualité premium</h3>
+                    <p>Des produits testés et approuvés pour leur excellence gustative et leur pureté.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="satisfaction-clients">
+        <div class="container">
+            <h2>La satisfaction de nos clients est notre objectif</h2>
+            <div class="avis-clients-grid">
+                <div class="avis-client">
+                    <p>je recommande vivement les produits venus ils sont d'une qualité exceptionnelle j'ai pu tester plusieurs produits j'ai eu d'excellents résultats</p>
+                    <div class="avis-client-footer">
+                        <div class="avatar-client">
+                            <img src="./imagess/produits.png" alt="Nina Melina">
+                        </div>
+                        <span class="nom-du-client">Nina Melina</span>
+                    </div>
+                </div>
+
+                <div class="avis-client">
+                    <p>Personnellement j'adore les produits venus je tiens à vous remercier pour la qualité ainsi que les prix des produits dont je suis fidèle.</p>
+                    <div class="avis-client-footer">
+                        <div class="avatar-client">
+                            <img src="./imagess/li.jpg" alt="Samah Bou">
+                        </div>
+                        <span class="nom-du-client">Samah Bou</span>
+                    </div>
+                </div>
+
+                <div class="avis-client">
+                    <p>je le recommande vivement c'est extraordinaire. le déodorant la cire bande le shampooing...</p>
+                    <div class="avis-client-footer">
+                        <div class="avatar-client">
+                            <img src="./imagess/soumaia.jpg" alt="Soumia Benladghem">
+                        </div>
+                        <span class="nom-du-client">Soumia Benladghem</span>
+                    </div>
+                </div>
+
+                <div class="avis-client">
+                    <p>Franchement produits au top Je recommande vivement, c'est pas cher, c'est algérien bref c'est une fierté et on adore !</p>
+                    <div class="avis-client-footer">
+                        <div class="avatar-client">
+                            <img src="./imagess/li.jpg" alt="Soumia Ben">
+                        </div>
+                        <span class="nom-du-client">Soumia Ben</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <div class="footer-section">
+                <h3>Or & Douceur</h3>
+                <p>Produits de terroir d'exception : huiles, miels, tapenades et figues sèches.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="nos produits.html">Nos Produits</a></li>
+                    <li><a href="insciptio.html">S'inscrire</a></li>
+                    <li><a href="contactt.html">Nous contacter</a></li>
+                    <li><a href="promotion.html">Promotions</a></li> 
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email : <a href="mailto:contact@oretdouceur.com">contact@oretdouceur.com</a></p>
+                <p>Téléphone : <a href="tel:+212600000000">+212 6 00 00 00 00</a></p>
+                <p>Adresse : Paris, France</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="https://www.instagram.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="https://twitter.com/oretdouceur" target="_blank" rel="noopener">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Or & Douceur. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data for products (Ceci est essentiel pour le panier)
+        const produits = {
+            "huile1": { id: "huile1", nom: "Huile d'olive extra vierge", prix: 12.00, image: "imagess/olive oil.jpg" },
+            "huile2": { id: "huile2", nom: "Huile d'argan", prix: 18.00, image: "imagess/argan.jpg" },
+            "huile3": { id: "huile3", nom: "Huile de figues de barbarie", prix: 15.00, image: "imagess/figues de barbarie.jpg" },
+            "huile4": { id: "huile4", nom: "Huile de lentisque", prix: 13.50, image: "imagess/entisco.jpg" },
+            "miel1": { id: "miel1", nom: "Miel d'euphorbe", prix: 14.00, image: "imagess/miel3.jpg" },
+            "miel2": { id: "miel2", nom: "Miel de lavande", prix: 11.50, image: "imagess/miel1.jpg" },
+            "miel3": { id: "miel3", nom: "Miel de thym", prix: 13.00, image: "imagess/miel2.jpg" },
+            "miel4": { id: "miel4", nom: "Miel d'oranger", prix: 12.50, image: "imagess/miel4.jpg" },
+            "datte1": { id: "datte1", nom: "Deglet Nour", prix: 10.00, image: "imagess/dattes.jpg" },
+            "datte2": { id: "datte2", nom: "Medjool", prix: 16.00, image: "imagess/datte1.jpg" },
+            "datte3": { id: "datte3", nom: "Kenta", prix: 18.00, image: "imagess/datte2.jpg" },
+            "datte4": { id: "datte4", nom: "Dattes bio", prix: 13.00, image: "imagess/datte3.jpg" },
+            "fromage1": { id: "fromage1", nom: "Fromage de chèvre", prix: 10.00, image: "imagess/de chervre.jpg" },
+            "fromage2": { id: "fromage2", nom: "Gruyère", prix: 16.00, image: "imagess/grueree.jpg" },
+            "fromage3": { id: "fromage3", nom: "Fromage Fondu", prix: 18.00, image: "imagess/fondu.jpg" },
+            "fromage4": { id: "fromage4", nom: "Camembert", prix: 13.00, image: "imagess/gruere.jpg" },
+            "epice1": { id: "epice1", nom: "Paprika", prix: 10.00, image: "imagess/paprika.jpg" },
+            "epice2": { id: "epice2", nom: "Curcuma", prix: 16.00, image: "imagess/curcuma.jpg" },
+            "epice3": { id: "epice3", nom: "Cumin", prix: 18.00, image: "imagess/cumin.jpg" },
+            "epice4": { id: "epice4", nom: "Ail en poudre", prix: 13.00, image: "imagess/ail.jpg" },
+            "figue1": { id: "figue1", nom: "Kadota, Calimyrna", prix: 10.00, image: "imagess/fsblnc.jpg" },
+            "figue2": { id: "figue2", nom: "Black Mission, Brown Turkey", prix: 16.00, image: "imagess/fseches.jpg" },
+            "figue3": { id: "figue3", nom: "Adriatique", prix: 18.00, image: "imagess/figues eches violet.jpg" }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialisation du panier sur le chargement de la page
+            updateCartCount();
+
+            // Gestion des boutons "Ajouter au panier" - cette partie est nécessaire si vous avez des boutons sur cette page
+            const boutons = document.querySelectorAll('.ajouter-panier');
+            boutons.forEach(bouton => {
+                bouton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const produitId = this.getAttribute('data-id');
+                    const produit = produits[produitId];
+                    if (produit) {
+                        ajouterAuPanier(produit);
+                    }
+                });
+            });
+            
+            // Effet de scroll pour le header
+            const header = document.querySelector('header');
+            if (header) { 
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+
+            // Slider automatique (à noter : aucun élément '.slide' n'est présent dans le HTML actuel,
+            // donc ce code JS est inutile ici à moins que vous n'ajoutiez un slider plus tard)
+            const slides = document.querySelectorAll('.slide');
+            if (slides.length > 0) {
+                let currentSlide = 0;
+                function nextSlide() {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }
+                setInterval(nextSlide, 5000);
+            }
+        });
+
+        // Fonctions du panier
+        function ajouterAuPanier(produit) {
+            let panier = JSON.parse(localStorage.getItem('panier')) || [];
+            const produitExistant = panier.find(item => item.id === produit.id);
+            
+            if (produitExistant) {
+                produitExistant.quantite += 1;
+            } else {
+                panier.push({
+                    id: produit.id,
+                    nom: produit.nom,
+                    prix: produit.prix,
+                    image: produit.image,
+                    quantite: 1
+                });
+            }
+            localStorage.setItem('panier', JSON.stringify(panier));
+            updateCartCount();
+            showNotification(`${produit.nom} a été ajouté au panier`);
+        }
+
+        function updateCartCount() {
+            const panier = JSON.parse(localStorage.getItem('panier')) || [];
+            const count = panier.reduce((total, item) => total + item.quantite, 0);
+            const compteur = document.getElementById('cart-count');
+            
+            if (compteur) { 
+                compteur.textContent = count;
+            }
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('fade-out');
+                setTimeout(() => notification.remove(), 500);
+            }, 3000);
+        }
+
+// Burger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbar.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    }
+});
+
+// Close menu on item click
+document.querySelectorAll('.navbar a').forEach(item => {
+    item.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navbar.classList.remove('active');
+    });
+});
+    
+    </script>
+    </body>
+</html>

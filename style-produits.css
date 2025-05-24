@@ -1,0 +1,120 @@
+/* STYLE SPECIFIQUE PAGE PRODUITS */
+.page-produits {
+  padding: 80px 20px;
+  background: var(--cream);
+}
+
+.produit-detail {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.produit-gauche {
+  flex: 1;
+  max-width: 400px;
+}
+
+.produit-gauche img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.notation {
+  text-align: center;
+}
+
+.etoile {
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin: 0 2px;
+}
+
+.etoile.active {
+  color: var(--gold);
+}
+
+.note {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: var(--text);
+}
+
+.produit-droite {
+  flex: 2;
+}
+
+.produit-droite h2 {
+  color: var(--dark);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.benefices h3 {
+  color: var(--olive);
+  margin-bottom: 10px;
+}
+
+.benefices ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.benefices li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+
+.benefices .fa-check {
+  color: var(--gold);
+}
+
+.prix {
+  font-size: 1.8em;
+  color: var(--dark);
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+.btn-achat {
+  background: var(--gold);
+  color: var(--dark);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-achat:hover {
+  background: var(--dark-gold);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .produit-detail {
+      flex-direction: column;
+  }
+  
+  .produit-gauche {
+      max-width: 100%;
+  }
+}
